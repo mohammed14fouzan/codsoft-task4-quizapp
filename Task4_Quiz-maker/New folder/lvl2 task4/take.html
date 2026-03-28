@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCloud | Take Quiz</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">Quiz<span>Cloud</span></div>
+            <ul>
+                <li><a href="Index.HTML">Home</a></li>
+                <li><a href="Create.HTML">Create Quiz</a></li>
+                <li><a href="Take.HTML" class="active">Browse Quizzes</a></li>
+                <li><a href="Login.HTML">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="quiz-status-bar"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                <div class="timer-box glass-card" style="padding: 10px 20px;">
+                    Time Left: <span id="time-val" style="color: var(--secondary); font-weight: bold;">30</span>s
+                </div>
+                <div class="progress-wrapper" style="flex: 1; margin: 0 20px;">
+                    <div id="progress-bar"
+                        style="height: 8px; width: 0%; background: var(--primary); border-radius: 4px; transition: 0.4s; box-shadow: 0 0 10px var(--primary);">
+                    </div>
+                </div>
+            </div>
+
+            <div id="quiz-area" class="glass-card">
+                <div id="quiz-selection-list">
+                    <h2>Select a Quiz to Start</h2>
+                    <h1 style="color: rgb(109, 32, 160); margin-top: 10px;">Quiz Title</h1>
+
+                    <div id="available-quizzes" class="grid-layout" style="margin-top: 20px;">
+                    </div>
+                </div>
+                <div id="active-quiz" class="hidden">
+                    <h2 id="current-q-text" style="margin-bottom: 2rem;"></h2>
+                    <div id="options-list" class="options-vertical"
+                        style="display: flex; flex-direction: column; gap: 15px; margin-top: 2rem;">
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>

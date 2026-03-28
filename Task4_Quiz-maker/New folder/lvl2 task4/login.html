@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCloud | Login & Register</title>
+    <link rel="stylesheet" href="Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="auth-page">
+    <div class="auth-wrapper">
+        <div class="auth-side-brand">
+            <div class="brand-content">
+                <h1>Quiz<span>Cloud</span></h1>
+                <p>The smartest way to create, share, and track quizzes in real-time.</p>
+            </div>
+        </div>
+
+        <div class="auth-side-form">
+
+            <form id="loginForm" class="auth-form">
+                <h2>Welcome Back</h2>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="loginUser" placeholder="Enter username" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="loginPass" placeholder="••••••••" autocomplete="new-password" required>
+                </div>
+                <button type="button" class="btn-solid" onclick="handleLogin()">Sign In</button>
+            </form>
+
+            <form id="registerForm" class="auth-form hidden">
+                <h2>Create Account</h2>
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regName" placeholder="Your Name" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="regUser" placeholder="Choose username" autocomplete="off" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="regPass" placeholder="••••••••" autocomplete="new-password" required>
+                </div>
+                <button type="button" class="btn-solid" onclick="handleRegister()">Sign Up</button>
+            </form>
+
+            <div class="form-toggle">
+                <button id="showLogin" class="toggle-btn active" onclick="toggleAuth('login')">Login</button>
+                <button id="showRegister" class="toggle-btn" onclick="toggleAuth('register')">Register</button>
+            </div>
+
+            <a href="Index.HTML" class="back-link">← Back to Home</a>
+
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCloud | Create Quiz</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">Quiz<span>Cloud</span></div>
+            <ul>
+                <li><a href="Index.HTML">Home</a></li>
+                <li><a href="Create.HTML" class="active">Create Quiz</a></li>
+                <li><a href="Take.HTML">Browse Quizzes</a></li>
+                <li><a href="Login.HTML">Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="glass-card">
+                <h2>Build a New Quiz</h2>
+                <p>Add your title and questions below. All quizzes are saved locally.</p>
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(255,255,255,0.1);">
+
+                <div class="input-group">
+                    <label>Quiz Title</label>
+                    <input type="text" id="quizTitle" placeholder="e.g., JavaScript Expert Level">
+                </div>
+
+                <div id="questions-container">
+                    <div class="question-block glass-card" style="margin-top: 20px; padding: 1.5rem;">
+                        <input type="text" class="q-text" placeholder="Enter your question here">
+                        <div class="options-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <input type="text" class="opt" placeholder="Option 1">
+                            <input type="text" class="opt" placeholder="Option 2">
+                            <input type="text" class="opt" placeholder="Option 3">
+                            <input type="text" class="opt" placeholder="Option 4">
+                        </div>
+                        <select class="correct-ans"
+                            style="width: 100%; background: #1e293b; color: white; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                            <option value="0">Correct: Option 1</option>
+                            <option value="1">Correct: Option 2</option>
+                            <option value="2">Correct: Option 3</option>
+                            <option value="3">Correct: Option 4</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="action-row" style="margin-top: 2rem; display: flex; gap: 15px;">
+                    <button onclick="addQuestion()" class="btn-outline"
+                        style="background: transparent; border: 1px solid var(--primary); color: white; padding: 10px 20px; border-radius: 10px; cursor: pointer;">+
+                        Add Question</button>
+                    <button onclick="saveFullQuiz()" class="btn-solid">Publish Quiz</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="Script.js"></script>
+</body>
+
+</html>
